@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <title> Sally Smith (in React) </title>
 </head>
 <body>
@@ -20,6 +21,7 @@
 
     <script type="text/babel">
     // Code goes here
+
     function App(props) {
         console.log(props);
         return (
@@ -29,10 +31,12 @@
         );
     }
 
+    const studentName = 'Sally Smith';
+
     ReactDOM.render(
         <App>
             <header>
-                <h1> Sally Smith </h1>
+                <h1> {studentName} </h1>
             </header>
 
             <main>
@@ -58,12 +62,12 @@
                     <h2> 
                         Contact Information
                     </h2>
-                    <ul>
+                    <ul className="contact">
                         <li> Sally Suzanne Smith </li>
-                        <li> <a href="mailto:sallyssmith@gmail.com?subject=Sally, I Saw Your Resume!"> sallyssmith@gmail.com </a> </li>
-                        <li> <a href="tel:3011012424"> 303-101-2424 </a> </li>
-                        <li> <img src="Sally Student Headshot.jpg" alt="Sally Smith Headshot"/> </li>
+                        <li> Email: <a href="mailto:sallyssmith@gmail.com?subject=Sally, I Saw Your Resume!"> sallyssmith@gmail.com </a> </li>
+                        <li> Telephone: <a href="tel:3011012424"> 303-101-2424 </a> </li>
                     </ul>
+                    <img className="headshot" src="Sally Student Headshot.jpg" alt="Sally Smith Headshot"/>
                 </address>
             </main>
 
